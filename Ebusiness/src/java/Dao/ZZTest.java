@@ -5,11 +5,13 @@
  */
 package Dao;
 
-import Bean.Product;
-import Bean.ProductCategory;
+import Bean.Record;
+import Bean.Transaction;
 import java.util.List;
+import java.util.Map;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.support.rowset.SqlRowSet;
 
 /**
  *
@@ -20,18 +22,18 @@ public class ZZTest {
     public static void main(String[] args) throws Exception {
         try {
             ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
-            ProductDao dao = (ProductDao) ac.getBean("productDao");
+            TransactionDao dao = (TransactionDao) ac.getBean("transactionDao");
+//
+//            String[] p={"5"};
+//            String[] a={"6"};
+//            System.out.println(dao.InsertTransactionByID(p));
+//            System.out.println(dao.InsertTransactionByID(a));
 
-//            String[] p={"bba","130","23","2","32"};
-//            String[] a={"zzz","230","30","2","32","3"};
-//            System.out.println(dao.InsertProduct(p));
-//            System.out.println(dao.InsertProduct(a));
-            System.out.println("DeleteProductByID " + dao.DeleteProductByID("3"));
-//            List<Product> list = dao.GetAllProduct();
-//            for (Product e : list) {
-//                System.out.println(e.getProduct_id() + " " + e.getProduct_name());
+//            System.out.println("GetTransaction");
+//            SqlRowSet rows = dao.GetTransaction("5");
+//            while(rows.next()){
+//                System.out.println(rows.getInt(1)+" "+rows.getTimestamp(2)+" "+rows.getInt(4));
 //            }
-            
 
         } catch (RuntimeException e) {
             e.printStackTrace();

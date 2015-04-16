@@ -22,7 +22,7 @@ public class TransactionRowMapper implements RowMapper<Transaction> {
         transaction.setTransaction_id(rs.getInt("TRANSACTION_ID"));
         transaction.setTransaction_date(rs.getTimestamp("TRANSACTION_DATE"));
         transaction.setCustomer_id(rs.getInt("CUSTOMER_ID"));
-        transaction.setSalesperson_id(rs.getInt("SALESPERSON_ID"));
+//        transaction.setSalesperson_id(rs.getInt("SALESPERSON_ID"));
                 
         return transaction;
     }

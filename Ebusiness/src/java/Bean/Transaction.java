@@ -18,7 +18,7 @@ public class Transaction implements Serializable {
     private int transaction_id;
     private Timestamp transaction_date;
     private int customer_id;
-    private int salesperson_id;
+//    private int salesperson_id;
 
     public int getTransaction_id() {
         return transaction_id;
@@ -44,13 +44,13 @@ public class Transaction implements Serializable {
         this.customer_id = customer_id;
     }
 
-    public int getSalesperson_id() {
-        return salesperson_id;
-    }
-
-    public void setSalesperson_id(int salesperson_id) {
-        this.salesperson_id = salesperson_id;
-    }
+//    public int getSalesperson_id() {
+//        return salesperson_id;
+//    }
+//
+//    public void setSalesperson_id(int salesperson_id) {
+//        this.salesperson_id = salesperson_id;
+//    }
     
     
 }

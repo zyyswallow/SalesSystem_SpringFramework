@@ -49,6 +49,9 @@
     <bean id="addressDao" class="Dao.AddressDao">  
         <property name="jdbcTemplate" ref="jdbcTemplate"/>  
     </bean> 
+    <bean id="transactionDao" class="Dao.TransactionDao">  
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>  
+    </bean> 
     <bean id="recordDao" class="Dao.RecordDao">  
         <property name="jdbcTemplate" ref="jdbcTemplate"/>  
     </bean> 
