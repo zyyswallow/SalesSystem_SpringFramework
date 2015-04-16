@@ -64,22 +64,13 @@ public class RecordDao {
                 new int[]{java.sql.Types.INTEGER});
     }
 
-    //update records by transaction_id
-    public int UpdateRecordByTransactionID(String[] array) {
-        String sql = "update Record set product_id=?, amount=?,price=? "
-                + "where transaction_id=?";
+    //update records by transaction_id and product_id
+    public int UpdateRecordByTransactionIDAndProductID(String[] array) {
+        String sql = "update Record set amount=?,price=? "
+                + "where transaction_id=? and product_id=?";
         return jdbcTemplate.update(sql,
                 array,
                 new int[]{java.sql.Types.INTEGER, java.sql.Types.INTEGER, java.sql.Types.INTEGER, java.sql.Types.INTEGER});
-    }
-
-    //update records by product_id
-    public int UpdateRecordByProductID(String[] array) {
-        String sql = "update Record set transaction_id=?, amount=?,price=? "
-                + "where product_id=?";
-        return jdbcTemplate.update(sql, 
-                array, 
-                new int[] {java.sql.Types.INTEGER,java.sql.Types.INTEGER,java.sql.Types.INTEGER,java.sql.Types.INTEGER});
     }
 
 }
